@@ -1,7 +1,9 @@
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView, Dimensions } from 'react-native';
 import { ExternalLink } from '@/components/ExternalLink';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+
+const screenWidth = Dimensions.get('window').width; // Get screen width
 
 export default function TabTwoScreen() {
   return (
@@ -40,35 +42,35 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ADD8E6', // Lighter blue background
+    backgroundColor: '#ADD8E6',
     padding: 16,
   },
   title: {
-    color: '#003366', // Darker blue text for title
+    color: '#003366',
     fontSize: 24,
     marginBottom: 16,
   },
   card: {
-    width: '100%',
+    width: screenWidth * 0.9,
     padding: 16,
     borderRadius: 8,
     marginVertical: 8,
     alignItems: 'center',
   },
   cardBlue: {
-    backgroundColor: '#004c99', // Medium blue for Enchanting Butterfly
+    backgroundColor: '#004c99', 
   },
   cardLightBlue: {
-    backgroundColor: '#0073e6', // Light blue for Grailed link
+    backgroundColor: '#0073e6',
   },
   cardIndigo: {
-    backgroundColor: '#4B0082', // Indigo for Stardelic on Depop
+    backgroundColor: '#4B0082',
   },
   cardDarkIndigo: {
-    backgroundColor: '#2c003c', // Dark Indigo for Stardelic website
+    backgroundColor: '#2c003c',
   },
   cardText: {
-    color: '#FFFFFF', // White text to contrast with card colors
+    color: '#FFFFFF',
     fontSize: 18,
   },
 });
