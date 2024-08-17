@@ -6,9 +6,9 @@ import { ThemedView } from '@/components/ThemedView';
 export default function TabTwoScreen() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText type="title">Enchanting Butterfly</ThemedText>
+      <ThemedText style={styles.title} type="title">Enchanting Butterfly</ThemedText>
       <ExternalLink href="https://enchantingbutterfly.com/">
-        <ThemedText type="link">Visit Enchanting Butterfly</ThemedText>
+        <ThemedText style={styles.link} type="link">Visit Enchanting Butterfly</ThemedText>
       </ExternalLink>
     </ThemedView>
   );
@@ -19,6 +19,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#FFFFFF', // White background
+    backgroundColor: '#ADD8E6', // Lighter blue background
+  },
+  title: {
+    color: '#003366', // Darker blue text for title
+  },
+  link: {
+    color: '#004c99', // Medium blue text for link
   },
 });
