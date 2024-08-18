@@ -8,7 +8,7 @@ const screenWidth = Dimensions.get('window').width; // Get screen width
 export default function TabTwoScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <ThemedText style={styles.title} type="title">Explore Enchanting Links</ThemedText>
+      <ThemedText style={styles.title} type="title">View our shops</ThemedText>
       
       <ExternalLink href="https://enchantingbutterfly.com/">
         <ThemedView style={[styles.card, styles.cardBlue]}>
