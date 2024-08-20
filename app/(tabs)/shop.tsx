@@ -1,48 +1,57 @@
+import React from 'react';
 import { StyleSheet, ScrollView, Dimensions } from 'react-native';
 import { ExternalLink } from '@/components/ExternalLink';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const screenWidth = Dimensions.get('window').width; // Get screen width
 
 export default function TabTwoScreen() {
   return (
-    <ScrollView contentContainerStyle={styles.container}>
-      <ThemedText style={styles.title} type="title">View our shops</ThemedText>
-      
-      <ExternalLink href="https://enchantingbutterfly.com/">
-        <ThemedView style={[styles.card, styles.cardBlue]}>
-          <ThemedText style={styles.cardText}>Official Enchanting Butterfly Website</ThemedText>
-        </ThemedView>
-      </ExternalLink>
+    <LinearGradient
+      colors={['#1E90FF', '#00FA9A']} // Blue to Green gradient
+      style={styles.gradientBackground}
+    >
+      <ScrollView contentContainerStyle={styles.container}>
+        <ThemedText style={styles.title} type="title">View our shops</ThemedText>
+        
+        <ExternalLink href="https://enchantingbutterfly.com/">
+          <ThemedView style={[styles.card, styles.cardBlue]}>
+            <ThemedText style={styles.cardText}>Official Enchanting Butterfly Website</ThemedText>
+          </ThemedView>
+        </ExternalLink>
 
-      <ExternalLink href="https://www.grailed.com/enchantingbutterfly">
-        <ThemedView style={[styles.card, styles.cardLightBlue]}>
-          <ThemedText style={styles.cardText}>Shop Enchanting Butterfly on Grailed</ThemedText>
-        </ThemedView>
-      </ExternalLink>
+        <ExternalLink href="https://www.grailed.com/enchantingbutterfly">
+          <ThemedView style={[styles.card, styles.cardLightBlue]}>
+            <ThemedText style={styles.cardText}>Shop Enchanting Butterfly on Grailed</ThemedText>
+          </ThemedView>
+        </ExternalLink>
 
-      <ExternalLink href="https://www.depop.com/st4rdelic/">
-        <ThemedView style={[styles.card, styles.cardIndigo]}>
-          <ThemedText style={styles.cardText}>Shop Stardelic on Depop</ThemedText>
-        </ThemedView>
-      </ExternalLink>
+        <ExternalLink href="https://www.depop.com/st4rdelic/">
+          <ThemedView style={[styles.card, styles.cardIndigo]}>
+            <ThemedText style={styles.cardText}>Shop Stardelic on Depop</ThemedText>
+          </ThemedView>
+        </ExternalLink>
 
-      <ExternalLink href="https://st4rdelic.com/">
-        <ThemedView style={[styles.card, styles.cardDarkIndigo]}>
-          <ThemedText style={styles.cardText}>Official Stardelic Website</ThemedText>
-        </ThemedView>
-      </ExternalLink>
-    </ScrollView>
+        <ExternalLink href="https://st4rdelic.com/">
+          <ThemedView style={[styles.card, styles.cardDarkIndigo]}>
+            <ThemedText style={styles.cardText}>Official Stardelic Website</ThemedText>
+          </ThemedView>
+        </ExternalLink>
+      </ScrollView>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
+  gradientBackground: {
+    flex: 1,
+  },
   container: {
     flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ADD8E6',
     padding: 16,
   },
   title: {
